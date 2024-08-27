@@ -1,0 +1,357 @@
+:root {
+  --primary: #7ac6d4;
+  --secondary: #474e53;
+}
+
+body {
+  font-family: "Epilogue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1rem;
+  color: #667282;
+}
+
+.oswald-bold {
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* btn */
+
+.btn {
+  display: inline-block;
+  transition: all 0.2s ease-in;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.btn:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) scaleY(1) scaleX(1.25);
+  top: 100%;
+  width: 140%;
+  height: 180%;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 50%;
+  display: block;
+  transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+  z-index: -1;
+}
+
+.btn:after {
+  content: "";
+  position: absolute;
+  left: 55%;
+  transform: translateX(-50%) scaleY(1) scaleX(1.45);
+  top: 180%;
+  width: 160%;
+  height: 190%;
+  border-radius: 50%;
+  display: block;
+  transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+  z-index: -1;
+}
+
+.btn:hover {
+  color: #ffffff;
+}
+
+.btn:hover:before {
+  top: -35%;
+  transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+
+.btn:hover:after {
+  top: -45%;
+  transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+
+.btn-primary:hover:before,
+.btn-primary:hover:after {
+  background-color: var(--secondary);
+}
+
+.btn-secondary:hover:before,
+.btn-secondary:hover:after {
+  background-color: var(--primary);
+}
+
+.bounce {
+  animation: bounce 1.5s infinite linear;
+  -webkit-animation: bounce 1.5s infinite linear;
+  -moz-animation: bounce 1.5s infinite linear;
+  -o-animation: bounce 1.5s infinite linear;
+  -ms-animation: bounce 1.5s infinite linear;
+}
+@keyframes bounce {
+  0% {
+    -webkit-transform: translateY(6px);
+    transform: translateY(6px);
+    opacity: 1;
+  }
+  50% {
+    -webkit-transform: translateY(3px);
+    transform: translateY(3px);
+    opacity: 0.4;
+  }
+  100% {
+    -webkit-transform: translateY(6px);
+    transform: translateY(6px);
+    opacity: 1;
+  }
+}
+
+/* header */
+
+/* header */
+
+.header {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  position: fixed;
+  top: 0;
+  z-index: 40;
+  width: 100%;
+}
+
+.headerbox {
+  box-shadow: 0 0px 88px 8px rgb(0 0 0 / 8%);
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOutUp {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+}
+
+.fadeInDown {
+  animation: fadeInDown 0.5s ease forwards;
+}
+
+.fadeOutUp {
+  animation: fadeOutUp 0.5s ease forwards;
+}
+
+/* slick slider */
+
+.slick-next,
+.slick-prev {
+  width: 40px;
+  height: 40px;
+  background: var(--secondary);
+  transition: all linear 0.3s;
+}
+
+.slick-next:hover,
+.slick-prev:hover {
+  background: var(--primary);
+}
+
+.slick-next:before,
+.slick-prev:before {
+  font-family: "icomoon";
+}
+
+.slick-prev:before {
+  content: "\f177";
+}
+
+.slick-next:before {
+  content: "\f178";
+}
+
+.mainslider .slick-next,
+.mainslider .slick-prev {
+  z-index: 9;
+}
+
+.mainslider .slick-prev {
+  left: 0rem;
+}
+
+.mainslider .slick-next {
+  right: 0rem;
+}
+
+.aboutImage:before {
+  content: "";
+  width: 270px;
+  height: 100%;
+  position: absolute;
+  background: var(--primary);
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%) skew(-23deg, 0deg);
+  z-index: -1;
+}
+
+/* services */
+
+.serviceImage:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(217, 217, 217, 0) 0%,
+    rgba(217, 217, 217, 0) 13.02%,
+    rgba(0, 0, 0, 0.51) 42.5%,
+    rgba(0, 0, 0, 0.63) 70%,
+    #000000 100%
+  );
+  background-repeat: no-repeat;
+  background-position: center center;
+  z-index: 1;
+  transition: all 0.4s ease-in-out;
+}
+
+.serviceImage > img {
+  display: block;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.serviceBox:hover .serviceImage > img {
+  transform: scale(1.1);
+}
+
+.serviceBox:hover .service-description {
+  transform: translateY(0%);
+  bottom: 20px;
+}
+
+.serviceBox:hover .service-description > p {
+  opacity: 1;
+}
+
+/* testimonial */
+
+.starWrapper .star-filled {
+  color: var(--primary);
+}
+
+.sliderWrapper .slick-slide {
+  margin: 0 8px;
+}
+
+.sliderWrapper .slick-list {
+  margin: 0 -8px;
+}
+
+.sliderWrapper .slick-track {
+  display: flex;
+}
+
+.sliderWrapper.testimonialSlider .slick-track {
+  align-items: center;
+}
+
+.sliderWrapper .slick-dots {
+  bottom: -60px;
+}
+
+.sliderWrapper .slick-dots li {
+  margin: 0 3px;
+}
+
+.sliderWrapper .slick-dots li,
+.sliderWrapper .slick-dots li button {
+  width: 10px;
+  height: 10px;
+}
+
+.sliderWrapper .slick-dots li.slick-active button:before {
+  color: var(--secondary);
+  opacity: 1;
+}
+
+.sliderWrapper .slick-dots li button:before {
+  font-size: 10px;
+  line-height: 10px;
+  width: 10px;
+  height: 10px;
+}
+
+/* footer */
+
+.footerlinks li::marker {
+  font-family: "icomoon";
+  content: "\e934";
+}
+
+@media only screen and (min-width: 1024px) {
+  .sliderWrapper .slick-current + .slick-slide .slidebox {
+    background: #fff;
+    border: 1px solid var(--primary);
+  }
+  .sliderWrapper .slick-current + .slick-slide .slidebox > .testimonial-top,
+  .sliderWrapper .slick-current + .slick-slide .slidebox .icon-quote-left {
+    font-size: 48px;
+  }
+
+  .sliderWrapper
+    .slick-current
+    + .slick-slide
+    .slidebox
+    .userrating
+    .starWrapper
+    > .icon-star1,
+  .sliderWrapper .slick-current + .slick-slide .slidebox > p,
+  .sliderWrapper
+    .slick-current
+    + .slick-slide
+    .slidebox
+    .testimonial-bottom
+    .userinfo
+    span {
+    font-size: 20px;
+  }
+
+  .sliderWrapper
+    .slick-current
+    + .slick-slide
+    .slidebox
+    .testimonial-bottom
+    img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .sliderWrapper
+    .slick-current
+    + .slick-slide
+    .slidebox
+    .testimonial-bottom
+    .userinfo
+    h4 {
+    font-size: 24px;
+    line-height: 1.5;
+  }
+}
