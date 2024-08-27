@@ -19,7 +19,7 @@ nav {
 }
 
 .navigation-portrait {
-  height: 48px;
+  height: 64px;
 }
 
 .navigation-fixed {
@@ -97,9 +97,9 @@ nav {
   position: absolute;
   width: 24px;
   height: 2px;
-  background-color: #343a40;
+  background-color: #474e53;
   border-radius: 10px;
-  box-shadow: 0 0.5em 0 0 #343a40, 0 1em 0 0 #343a40;
+  box-shadow: 0 0.5em 0 0 #474e53, 0 1em 0 0 #474e53;
 }
 
 .navigation-portrait .nav-toggle {
