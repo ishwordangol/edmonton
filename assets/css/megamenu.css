@@ -1002,3 +1002,9 @@ nav {
     width: 10px;
   }
 }
+
+@media screen and (max-width: 640px) {
+  .navigation-portrait {
+    height: 52.05px;
+  }
+}
