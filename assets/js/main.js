@@ -20,7 +20,7 @@ $(window).scroll(function () {
 });
 
 $(window).on('load', function () {
-    $('#header').removeClass('header-hidden').css('display', 'block');
+    $('.headerbox .navbar').removeClass('nav-hidden').css('display', 'block');
 });
 
 // Homepage main slider
