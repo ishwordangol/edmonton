@@ -27,13 +27,14 @@ $(".mainslider").slick({
     dots: false,
     slidesToShow: 1,
     slidesToScroll: 1,
+    useCSS: false,
+    cssEase: 'ease-in-out',
     responsive: [
         {
             breakpoint: 768,
             settings: {
                 dots: false,
                 arrows: false,
-                infinite: false,
             },
         },
     ],

@@ -156,6 +156,11 @@ body {
 
 /* slick slider */
 
+.slick-slide {
+  will-change: transform;
+  backface-visibility: hidden;
+}
+
 .slick-next,
 .slick-prev {
   width: 40px;
