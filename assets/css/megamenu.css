@@ -989,14 +989,13 @@ nav {
   }
 }
 
-@media screen and (max-width: 768px) {
-  .nav-menu > li > a {
-    font-size: 14px;
+@media screen and (max-width: 1024px) {
+  .nav-menus-wrapper .nav-menu {
+    opacity: 0;
   }
 
-  .submenu-indicator-chevron {
-    height: 10px;
-    width: 10px;
+  .navigation-portrait .nav-menu {
+    opacity: 1;
   }
 }
 

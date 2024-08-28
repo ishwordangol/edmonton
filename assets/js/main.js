@@ -19,10 +19,6 @@ $(window).scroll(function () {
     lastScrollTop = scrollTop;
 });
 
-$(window).on('load', function () {
-    $('.headerbox .navbar').removeClass('nav-hidden').css('display', 'block');
-});
-
 // Homepage main slider
 $(".mainslider").slick({
     arrows: true,
