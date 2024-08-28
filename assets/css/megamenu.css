@@ -992,6 +992,7 @@ nav {
 @media screen and (max-width: 1024px) {
   .nav-menus-wrapper .nav-menu {
     opacity: 0;
+    overflow: hidden;
   }
 
   .navigation-portrait .nav-menu {
