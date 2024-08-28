@@ -1,6 +1,7 @@
 :root {
   --primary: #7ac6d4;
   --secondary: #474e53;
+  --primarydark: #2db9d3;
 }
 
 body {
@@ -80,6 +81,11 @@ body {
 .btn-secondary:hover:before,
 .btn-secondary:hover:after {
   background-color: var(--primary);
+}
+
+.btn-primarydark:hover:before,
+.btn-primarydark:hover:after {
+  background-color: var(--primarydark);
 }
 
 .bounce {
@@ -328,6 +334,23 @@ body {
 
 .expansionlist > a.active .fa-solid {
   color: #7a56a4;
+}
+
+/* contact banner */
+
+.mini-banner-left,
+.mini-banner-right {
+  z-index: -1;
+  animation: zumpX2 1s infinite alternate;
+}
+
+@keyframes zumpX2 {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(13px);
+  }
 }
 
 /* footer */
