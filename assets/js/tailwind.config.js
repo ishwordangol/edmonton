@@ -11,6 +11,7 @@ tailwind.config = {
       colors: {
         primary: '#7AC6D4',
         secondary: '#474E53',
+        primarydark: '#2db9d3',
         bg_gray: '#c0c0c0',
         bglight: '#FCF6F3',
         dark_gray: '#949494',

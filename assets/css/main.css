@@ -336,23 +336,6 @@ body {
   color: #7a56a4;
 }
 
-/* contact banner */
-
-.mini-banner-left,
-.mini-banner-right {
-  z-index: -1;
-  animation: zumpX2 1s infinite alternate;
-}
-
-@keyframes zumpX2 {
-  0% {
-    transform: translateX(0px);
-  }
-  100% {
-    transform: translateX(13px);
-  }
-}
-
 /* footer */
 
 .footerlinks li {

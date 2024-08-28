@@ -85,6 +85,9 @@
   content: "\ea2d";
   color: #f00;
 }
+.icon-warehouse:before {
+  content: "\ea2e";
+}
 .icon-parcel-delivery:before {
   content: "\ea1a";
 }
