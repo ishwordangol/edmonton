@@ -40,6 +40,17 @@ $(".mainslider").slick({
     ],
 });
 
+$('.mainslider').on('afterChange', function (event, slick, currentSlide) {
+    // Reset all slides to the initial scale
+    $('.slickbox').css('transform', 'scale(1)');
+
+    // Apply the zoom-in effect to the current slide
+    $('.slick-current').css('transform', 'scale(1.1)'); // Adjust scale as needed
+});
+
+// Trigger the zoom effect on the first slide when the page loads
+$('.mainslider .slick-current').css('transform', 'scale(1.1)');
+
 $(".testimonialSlider").slick({
     dots: true,
     arrows: false,

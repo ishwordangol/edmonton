@@ -162,6 +162,11 @@ body {
 
 /* slick slider */
 
+.mainslider .slickbox {
+  transform: scale(1);
+  transition: transform 3s ease-in-out;
+}
+
 .slick-next,
 .slick-prev {
   width: 40px;
