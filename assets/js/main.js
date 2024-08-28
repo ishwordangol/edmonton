@@ -101,3 +101,25 @@ $(function () {
         }
     });
 });
+
+// expansion panel
+
+$(".expansionlist > a").on("click", function (e) {
+    if ($(this).hasClass("active")) {
+        $(this).removeClass("active");
+        $(this).siblings(".expansioncontent").slideUp(200);
+        $(".expansionlist > a .icon-box")
+            .removeClass("icon-minus")
+            .addClass("icon-plus");
+    } else {
+        $(".expansionlist > a .icon-box")
+            .removeClass("icon-minus")
+            .addClass("icon-plus");
+        $(this).find(".icon-box").removeClass("icon-plus").addClass("icon-minus");
+        $(".expansionlist > a").removeClass("active");
+        $(this).addClass("active");
+        $(".expansioncontent").slideUp(200);
+        $(this).siblings(".expansioncontent").slideDown(200);
+    }
+    e.preventDefault();
+});

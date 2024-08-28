@@ -6,7 +6,7 @@ tailwind.config = {
         padding: '1rem',
       },
       backgroundImage: {
-        'parallax-pattern': "url('assets/images/parallaxbg.jpg')",
+        'whyus': "url('assets/images/why-us-bg.jpg')",
       },
       colors: {
         primary: '#7AC6D4',

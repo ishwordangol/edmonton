@@ -156,11 +156,6 @@ body {
 
 /* slick slider */
 
-.slick-slide {
-  will-change: transform;
-  backface-visibility: hidden;
-}
-
 .slick-next,
 .slick-prev {
   width: 40px;
@@ -302,6 +297,37 @@ body {
   line-height: 10px;
   width: 10px;
   height: 10px;
+}
+
+/* expansion */
+
+.expansionWrapper .expansionlist {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding-inline: 16px;
+  margin-bottom: 16px;
+}
+
+.expansioncontent {
+  padding-bottom: 24px;
+  display: none;
+}
+
+.expansionWrapper .expansionlist:first-child .expansioncontent {
+  display: block;
+}
+
+.expansionlist > a {
+  padding-block: 16px;
+}
+
+.expansionlist > a.active {
+  color: var(--primary);
+}
+
+.expansionlist > a.active .fa-solid {
+  color: #7a56a4;
 }
 
 /* footer */
