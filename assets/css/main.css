@@ -336,6 +336,22 @@ body {
   color: #7a56a4;
 }
 
+/* contact advertisement */
+
+.contactAdWrapper:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-image: url("../../assets/images/contact-ad-bg.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  z-index: -1;
+}
+
 /* footer */
 
 .footerlinks li {
@@ -349,6 +365,10 @@ body {
   left: -16px;
   top: 50%;
   transform: translateY(-50%);
+}
+
+.footerlinks li:hover::before {
+  color: var(--primary);
 }
 
 @media only screen and (min-width: 1024px) {
