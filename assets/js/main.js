@@ -22,7 +22,8 @@ $(window).scroll(function () {
 // Homepage main slider
 $(".mainslider").slick({
     arrows: true,
-    autoplay: false,
+    autoplay: true,
+    autoplaySpeed: 3000,
     dots: false,
     slidesToShow: 1,
     slidesToScroll: 1,
