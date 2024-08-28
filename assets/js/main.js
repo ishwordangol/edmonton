@@ -23,7 +23,7 @@ $(window).scroll(function () {
 $(".mainslider").slick({
     arrows: true,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 4000,
     dots: false,
     slidesToShow: 1,
     slidesToScroll: 1,
