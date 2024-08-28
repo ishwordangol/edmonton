@@ -40,7 +40,7 @@ body {
   background-color: rgba(0, 0, 0, 0.05);
   border-radius: 50%;
   display: block;
-  transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+  transition: all 0.3s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
   z-index: -1;
 }
 
@@ -54,7 +54,7 @@ body {
   height: 190%;
   border-radius: 50%;
   display: block;
-  transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+  transition: all 0.3s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
   z-index: -1;
 }
 
@@ -301,9 +301,17 @@ body {
 
 /* footer */
 
-.footerlinks li::marker {
+.footerlinks li {
+  position: relative;
+}
+
+.footerlinks li::before {
+  position: absolute;
   font-family: "icomoon";
   content: "\e934";
+  left: -16px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 @media only screen and (min-width: 1024px) {
