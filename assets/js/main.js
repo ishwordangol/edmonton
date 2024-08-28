@@ -19,6 +19,10 @@ $(window).scroll(function () {
     lastScrollTop = scrollTop;
 });
 
+$(window).on('load', function () {
+    $('#header').removeClass('header-hidden').css('display', 'block');
+});
+
 // Homepage main slider
 $(".mainslider").slick({
     arrows: true,
