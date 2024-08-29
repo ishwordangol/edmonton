@@ -352,7 +352,7 @@ body {
   bottom: 0;
   background-image: url("../../assets/images/contact-ad-bg.jpg");
   background-size: cover;
-  background-position: center center;
+  background-position: center left;
   background-attachment: fixed;
   z-index: -1;
 }
@@ -436,5 +436,9 @@ body {
   .header {
     padding-top: 16px;
     padding-bottom: 16px;
+  }
+
+  .contactAdWrapper:after {
+    background-attachment: unset;
   }
 }
