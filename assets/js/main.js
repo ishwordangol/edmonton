@@ -51,8 +51,28 @@ $('.mainslider').on('afterChange', function (event, slick, currentSlide) {
 // Trigger the zoom effect on the first slide when the page loads
 $('.mainslider .slick-current').css('transform', 'scale(1.05)');
 
+// Function to trigger AOS animation manually
+function triggerAOSAnimation() {
+    $('.mainslider .slick-active [data-aos]').each(function () {
+        $(this).addClass('aos-animate');
+    });
+}
+
+// Trigger AOS on initial load
+triggerAOSAnimation();
+
+// Reinitialize AOS on each slide change
+$('.mainslider').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+    // Remove the aos-animate class from all elements
+    $('[data-aos]').removeClass('aos-animate');
+});
+
 $('.mainslider').on('afterChange', function (event, slick, currentSlide) {
-    AOS.refresh();  // Refresh AOS to trigger animations again
+    // Add the aos-animate class to the active slide elements
+    triggerAOSAnimation();
+
+    // Refresh AOS to apply animations
+    AOS.refreshHard();
 });
 
 $(".testimonialSlider").slick({
