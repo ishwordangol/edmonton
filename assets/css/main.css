@@ -376,6 +376,33 @@ body {
   color: var(--primary);
 }
 
+.notificationIcon .icon-bell {
+  transform-origin: top;
+  animation: ring 1.8s ease-out infinite;
+}
+
+@keyframes ring {
+  0% {
+    transform: rotate(0) scale(1) skew(1deg);
+  }
+  10% {
+    transform: rotate(-15deg) scale(1) skew(1deg);
+  }
+  20% {
+    transform: rotate(30deg) scale(1) skew(1deg);
+  }
+  30% {
+    transform: rotate(-15deg) scale(1) skew(1deg);
+  }
+  40% {
+    transform: rotate(30deg) scale(1) skew(1deg);
+  }
+  100%,
+  50% {
+    transform: rotate(0) scale(1) skew(1deg);
+  }
+}
+
 @media only screen and (min-width: 1024px) {
   .sliderWrapper .slick-current + .slick-slide .slidebox {
     background: #fff;

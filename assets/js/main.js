@@ -51,13 +51,17 @@ $('.mainslider').on('afterChange', function (event, slick, currentSlide) {
 // Trigger the zoom effect on the first slide when the page loads
 $('.mainslider .slick-current').css('transform', 'scale(1.05)');
 
+$('.mainslider').on('afterChange', function (event, slick, currentSlide) {
+    AOS.refresh();  // Refresh AOS to trigger animations again
+});
+
 $(".testimonialSlider").slick({
     dots: true,
     arrows: false,
     infinite: false,
-    autoplay: false,
+    autoplay: true,
     speed: 500,
-    autoplaySpeed: 1000,
+    autoplaySpeed: 3000,
     slidesToShow: 3,
     slidesToScroll: 1,
     swipe: true,
@@ -134,3 +138,4 @@ $(".expansionlist > a").on("click", function (e) {
     }
     e.preventDefault();
 });
+
