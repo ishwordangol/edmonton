@@ -182,6 +182,34 @@ body {
   content: "\f178";
 }
 
+.slick-dots {
+  bottom: 2rem;
+}
+
+.slick-dots li {
+  width: 0.5rem;
+  height: 0.5rem;
+  margin: 0 4px;
+}
+
+.slick-dots li button {
+  width: 0.5rem;
+  height: 0.5rem;
+  padding: 0;
+}
+
+.slick-dots li button:before {
+  width: 0.5rem;
+  height: 0.5rem;
+  content: "";
+  background: #7ac6d4;
+  opacity: 0.5;
+}
+
+.slick-dots li.slick-active button:before {
+  opacity: 1;
+}
+
 .mainslider .slick-next,
 .mainslider .slick-prev {
   z-index: 9;
