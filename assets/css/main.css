@@ -8,7 +8,7 @@ body {
   font-family: "Epilogue", sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 1rem;
+  font-size: 16px;
   color: #667282;
 }
 
@@ -115,17 +115,6 @@ body {
 
 /* header */
 
-/* header */
-
-.header {
-  padding-top: 24px;
-  padding-bottom: 24px;
-  position: fixed;
-  top: 0;
-  z-index: 40;
-  width: 100%;
-}
-
 .headerbox {
   box-shadow: 0 0px 88px 8px rgb(0 0 0 / 8%);
 }
@@ -169,8 +158,8 @@ body {
 
 .slick-next,
 .slick-prev {
-  width: 40px;
-  height: 40px;
+  width: 2.5rem;
+  height: 2.5rem;
   background: var(--secondary);
   transition: all linear 0.3s;
 }
@@ -460,11 +449,6 @@ body {
 }
 
 @media only screen and (max-width: 768px) {
-  .header {
-    padding-top: 16px;
-    padding-bottom: 16px;
-  }
-
   .contactAdWrapper:after {
     background-attachment: unset;
   }

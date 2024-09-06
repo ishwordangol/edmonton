@@ -1,4 +1,3 @@
-
 $(window).scrollTop(0);
 
 // Hide Header on on scroll down
