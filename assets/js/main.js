@@ -32,6 +32,7 @@ $(".mainslider").slick({
         {
             breakpoint: 768,
             settings: {
+                autoplay: false,
                 dots: false,
                 arrows: false,
             },
